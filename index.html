@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="Laboratory: Oleg Pislari" />
+	<meta name="author" content="Oleg Pislari" />
+	
+	<title>RecursiveFunction: Oleg Pislari</title>
+	
+	<!-- Style -->
+	<style>
+	body {
+	  margin: 0;
+	  font-family: "Lato", sans-serif;
+	  background-color: #ffffff;
+	  color: #212121;
+	}
+
+	p{
+		margin: 0 auto;
+		padding: 0;
+	}
+	.content{
+		width: 100%;
+	}
+	
+	.block{
+		margin: 20px;
+		padding: 20px;
+		border: solid 1px hsl(0deg 0% 80%);
+	}
+	h2{
+	    margin: 10px 0;
+	}
+	h2 span{
+	    font-size: 15px;
+	}
+	#recursiveFunction{
+		color: red;
+		font-size: 12px;
+	}
+	</style>
+	
+	<!-- JS Script -->
+    <script src="library.js" type="text/javascript"></script>
+	<script src="recursiveFunction.js" type="text/javascript"></script>
+    <script>
+	
+		document.addEventListener("DOMContentLoaded", function(){
+			try {
+				RecursiveFunction = new recursiveFunction();
+				RecursiveFunction.init();
+				
+			} catch(e) {
+				console.log(e);
+			}	
+		});
+	</script>
+  </head>
+<body>
+	<div class="content">
+		<div class="block">
+			<h2>JS Recursive Function</h2>
+			<div class="level_0">
+				<span>Level 0</span>
+				<div class="level_1">
+					&nbsp;&nbsp;<span>Level 1 < end</span>
+					<div class="level_2">
+						&nbsp;&nbsp;&nbsp;&nbsp;<span>Level 2</span>
+						<div class="level_3">
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Level 3</span>
+							<div class="level_4">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Level 4 > start</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<p>
+					<br/><span><i>Self.recurseGetParent(document.querySelector('.level_4'), 'level_1', 3);</i></span><br/>
+					<span id="recursiveFunction"></span>
+				</p>
+			</div>
+		</div>		
+	</div> 
+</body>
+</html>
